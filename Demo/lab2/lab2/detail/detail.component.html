@@ -1,0 +1,14 @@
+<div class="mt-3">
+    <span *ngFor="let price of prices" class="price">{{ price }}</span>
+    
+    <span *ngIf="olds.length > 0; else noOldPrice" class="old-price">
+        {{ olds[0] }}
+    </span>
+    <ng-template #noOldPrice>
+        <span class="old-price text-muted">test</span>
+    </ng-template>
+    <span class="best-seller">Giảm Giá</span>
+</div>
+
+<h5 class="mt-2" *ngFor="let name of names">{{name}}</h5>
+<p *ngFor="let detail of details">{{detail}}</p>

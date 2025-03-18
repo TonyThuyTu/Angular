@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "lab2": {
+    "lab2-angular": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/lab2",
+            "outputPath": "dist/lab2-angular",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -74,10 +74,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "lab2:build:production"
+              "buildTarget": "lab2-angular:build:production"
             },
             "development": {
-              "buildTarget": "lab2:build:development"
+              "buildTarget": "lab2-angular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -100,7 +100,6 @@
               }
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -110,6 +109,6 @@
     }
   },
   "cli": {
-    "analytics": "cbd42525-29e1-449b-a9d7-37346904360e"
+    "analytics": false
   }
 }
