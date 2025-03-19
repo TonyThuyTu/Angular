@@ -8,7 +8,6 @@ import { Component } from '@angular/core';
 })
 export class SlideComponent {
   images = [
-    'assets/black.jpg',
     'assets/white-blue.jpg',
     'assets/white-green.jpg',
     'assets/yellow.jpg',

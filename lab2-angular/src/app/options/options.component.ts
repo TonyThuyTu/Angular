@@ -11,14 +11,4 @@ export class OptionsComponent {
   sizes = ['256gb', '512gb', '1024gb'];
 
   quantity = 1;
-
-  tang() {
-    this.quantity++; 
-  }
-
-  giam() {
-    if (this.quantity > 1) {
-      this.quantity--;
-    }
-  }
 }
