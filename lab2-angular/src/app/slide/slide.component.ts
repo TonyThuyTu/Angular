@@ -2,10 +2,17 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-slide',
-  standalone: false,
   templateUrl: './slide.component.html',
-  styleUrl: './slide.component.css'
+  standalone: false,
+  styleUrls: ['./slide.component.css'] // <-- Phải là style**Urls**, không phải styleUrl
 })
 export class SlideComponent {
-
+  images = [
+    'assets/black.jpg',
+    'assets/white-blue.jpg',
+    'assets/white-green.jpg',
+    'assets/yellow.jpg',
+    'assets/pink.jpg'
+  ];
+  currentImage = 0;
 }

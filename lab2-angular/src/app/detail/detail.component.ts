@@ -7,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './detail.component.css'
 })
 export class DetailComponent {
-
+  prices=["15.500.000đ"]
+  olds = ["17.000.000đ"]
+  names = ["Iphone 15"]
+  details = ["Thiết kế thời thượng và bền bỉ - Mặt lưng kính được pha màu xu hướng cùng khung viền nhôm bền bỉ"]
 }

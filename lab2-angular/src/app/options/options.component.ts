@@ -4,8 +4,21 @@ import { Component } from '@angular/core';
   selector: 'app-options',
   standalone: false,
   templateUrl: './options.component.html',
-  styleUrl: './options.component.css'
+  styleUrls: ['./options.component.css']
 })
 export class OptionsComponent {
+  colors = ['black', 'white', 'yellow', 'pink'];
+  sizes = ['256gb', '512gb', '1024gb'];
 
+  quantity = 1;
+
+  tang() {
+    this.quantity++; 
+  }
+
+  giam() {
+    if (this.quantity > 1) {
+      this.quantity--;
+    }
+  }
 }

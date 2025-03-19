@@ -1,0 +1,9 @@
+.carousel-inner img {
+    width: 360px !important;
+    height: 228px !important;
+    object-fit: cover;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+}
