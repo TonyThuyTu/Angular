@@ -18,3 +18,7 @@
     cursor: pointer;
     margin-left: 4px;
 }
+
+.size-options button:hover {
+    border: color(black) 2px;
+}

@@ -7,11 +7,13 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./buy.component.css']
 })
 export class BuyComponent {
+
   @Input() buynow: string = 'Add to cart';
 
   @Output() buyOutput = new EventEmitter<string>();
 
   buy() {
-    alert("Item added to cart");
+    this.buyOutput.emit('Done');
   }
+  
 }
