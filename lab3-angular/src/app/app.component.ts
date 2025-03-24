@@ -9,9 +9,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'lab2-angular';
 
-  buy(){  
-    alert('Mua hàng thành công');
-  }
+
   
   products = {
 

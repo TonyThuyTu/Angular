@@ -1,0 +1,24 @@
+<div class="card" style="width: 18rem">
+  <img [src]="productPhoto()" class="card-img-top" alt="..." />
+  <div class="card-body">
+    <h5 class="card-title">{{ productName() }}</h5>
+    <p class="card-text">
+      {{ productDescription() }}
+    </p>
+    <!-- Chọn số lượng sản phẩm -->
+    <input
+      class="form-control text-center card-text"
+      type="number"
+      value="0"
+      min="0"
+      max="100"
+      id="quantity-input"
+      (change)="handleQuantityChange($event)"
+    />
+    <p class="card-text">VND {{ productPrice().toFixed(2) }}</p>
+
+    <a href="#" class="btn btn-primary" (click)="handleClick('Hello')">{{
+      productButton()
+    }}</a>
+  </div>
+</div>

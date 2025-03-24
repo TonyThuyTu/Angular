@@ -1,0 +1,29 @@
+h1 {
+  color: blue;
+}
+p {
+  font-size: 1.2em;
+}
+.isNotBestSeller {
+  display: none;
+}
+
+.textRed {
+  color: red;
+}
+
+.textGreen {
+  color: green;
+}
+
+.textBold {
+  font-weight: bold;
+}
+
+.textUnderline {
+  text-decoration: underline;
+}
+
+.textItalic {
+  font-style: italic;
+}
