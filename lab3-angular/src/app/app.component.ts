@@ -35,7 +35,8 @@ export class AppComponent {
     images: ['assets/white-blue.jpg', 
             'assets/white-green.jpg', 
             'assets/yellow.jpg', 
-            'assets/pink.jpg'],
+            'assets/pink.jpg',
+            'assets/black.jpg'],
 
     name: "Iphone 15 plus",
 
@@ -45,7 +46,7 @@ export class AppComponent {
   
     details: "The iPhone 15 Plus, which has features a 6.7-inch Super Retina XDR display, A16 Bionic chip, 6GB RAM, and up to 512GB storage. It has a 48MP dual-camera system, Dynamic Island, USB-C port, and up to 26 hours of battery life, all in a sleek glass and aluminum body with IP68 rating.",
 
-    colors: ['white', 'yellow', 'pink','green'],
+    colors: ['white', 'yellow', 'pink','green','black'],
 
     sizes: ['128gb','256gb', '512gb'],
 
