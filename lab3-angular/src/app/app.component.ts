@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   templateUrl: './app.component.html',
   standalone: false,
-  styleUrls: ['./app.component.css'] // <-- đã sửa đúng
+  styleUrls: ['./app.component.css'] 
 })
 export class AppComponent {
   title = 'lab2-angular';
