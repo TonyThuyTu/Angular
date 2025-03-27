@@ -1,0 +1,28 @@
+<div class="container d-flex justify-content-center mt-5">
+    <div class="product-card">
+
+      <app-slide [images] = "products.images"
+      [selectedColor]="selectedColor" [images]="products.images"
+      ></app-slide>
+
+      <app-detail
+        [name]="products.name"
+        [prices]="products.prices"
+        [olds]="products.olds"
+        [details]="products.details">
+    </app-detail>
+
+      <app-options 
+        (quantityChange)="handleQuantityChange($event)"
+        [colors]="products.colors" (colorSelected)="handleColorSelect($event)"
+        [sizes]="products.sizes"
+        [status]="products.status">
+        
+    </app-options>
+       
+      <app-buy (buyOutput)="handleBuyEvent($event)"></app-buy>
+
+    </div>
+
+  </div>
+  
