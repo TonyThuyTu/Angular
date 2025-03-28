@@ -4,53 +4,45 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   templateUrl: './app.component.html',
   standalone: false,
-  styleUrls: ['./app.component.css'] 
+  styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'lab2-angular';
+  title = 'Tony Nguyen';
 
-  // buy
-  handleBuyEvent(message: string){
-    console.log('Yes', message);  
-    alert(message);               
-  }
+  products = [
 
-  //option 
-  quantityFromOptions: number = 1;
+    {
+      id: 1,
+      name: 'iPhone 16 ',
+      image: 'assets/ip16prm titan black.png',
+      oldPrice: 23990000,
+      newPrice: 18990000,
+      discount: -17
+    },
+    {
+      id: 2,
+      name: 'Samsung Galaxy S24 Ultra',
+      image: 'assets/ip16prm titan yellow.png',
+      oldPrice: 29990000,
+      newPrice: 26990000,
+      discount: -10
+    },
+    {
+      id: 3,
+      name: 'Xiaomi 14 Pro',
+      image: 'assets/ip16prm titan white.png',
+      oldPrice: 19990000,
+      newPrice: 17990000,
+      discount: -10
+    },
+    {
+      id: 4,
+      name: 'Xiaomi 14 Pro',
+      image: 'assets/ip16prm titan nature.png',
+      oldPrice: 19990000,
+      newPrice: 17990000,
+      discount: -10
+    }
 
-  handleQuantityChange(qty: number) {
-    this.quantityFromOptions = qty;
-    console.log('Count: ', qty);
-  }
-
-  selectedColor: string = '';
-
-  handleColorSelect(color: string) {
-    this.selectedColor = color;
-    console.log('Màu đã chọn:', color);
-  }
-
-  products = {
-
-    images: ['assets/white-blue.jpg', 
-            'assets/white-green.jpg', 
-            'assets/yellow.jpg', 
-            'assets/pink.jpg',
-            'assets/black.jpg'],
-
-    name: "Iphone 15 plus",
-
-    prices: 15500000,
-
-    olds: 17000000,
-  
-    details: "The iPhone 15 Plus, which has features a 6.7-inch Super Retina XDR display, A16 Bionic chip, 6GB RAM, and up to 512GB storage. It has a 48MP dual-camera system, Dynamic Island, USB-C port, and up to 26 hours of battery life, all in a sleek glass and aluminum body with IP68 rating.",
-
-    colors: ['white', 'yellow', 'pink','green','black'],
-
-    sizes: ['128gb','256gb', '512gb'],
-
-    status: ['In stock']
-
-  }
+  ];
 }

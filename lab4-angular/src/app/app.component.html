@@ -1,28 +1,9 @@
-<div class="container d-flex justify-content-center mt-5">
-    <div class="product-card">
+<div class="container">
+  <h1 class="text-primary text-center">Hello {{ title }}!</h1>
+</div>
 
-      <app-slide [images] = "products.images"
-      [selectedColor]="selectedColor" [images]="products.images"
-      ></app-slide>
+<!-- <app-products [products] = "products"></app-products> -->
 
-      <app-detail
-        [name]="products.name"
-        [prices]="products.prices"
-        [olds]="products.olds"
-        [details]="products.details">
-    </app-detail>
+<!-- <app-product-details [products] = "products"></app-product-details> -->
 
-      <app-options 
-        (quantityChange)="handleQuantityChange($event)"
-        [colors]="products.colors" (colorSelected)="handleColorSelect($event)"
-        [sizes]="products.sizes"
-        [status]="products.status">
-        
-    </app-options>
-       
-      <app-buy (buyOutput)="handleBuyEvent($event)"></app-buy>
-
-    </div>
-
-  </div>
-  
+<router-outlet></router-outlet>
