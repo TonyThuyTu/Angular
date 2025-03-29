@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ProductService } from '../services/products.service';
 
 @Component({
   selector: 'app-products',
@@ -7,10 +8,14 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrl: './products.component.css'
 })
 export class ProductsComponent implements OnInit {
-  @Input() products: any[] = []; // Nếu không có dữ liệu, danh sách sẽ trống
+  
+  products: any[] = [];
+
+  constructor(private productService: ProductService){}
 
   ngOnInit() {
-    console.log(this.products); // Kiểm tra xem có dữ liệu không
+    this.products = this.productService.getProducts();
   }
+
 }
 
