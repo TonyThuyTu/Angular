@@ -1,0 +1,12 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Gaming Mouse",
+        "description": "High precision gaming mouse",
+        "price": 50,
+        "colors": ["Black", "Red"],
+        "photos": ["mouse1.jpg"]
+      }
+    ]
+}
