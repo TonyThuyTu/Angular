@@ -1,0 +1,6 @@
+.nav-link.active {
+    font-weight: bold;
+    color: #ffc107 !important; /* Màu vàng */
+    border-bottom: 2px solid #ffc107;
+  }
+  
