@@ -1,0 +1,16 @@
+<form (ngSubmit)="submitForm()" class="row g-2 mb-3 bg-light p-3 rounded shadow-sm">
+  <div class="col-md-6">
+    <input [(ngModel)]="todo.title" name="title" required class="form-control" placeholder="Nhập công việc..." />
+  </div>
+  <div class="col-md-4">
+    <select [(ngModel)]="todo.status" name="status" class="form-select">
+      <option value="pending">Chưa hoàn thành</option>
+      <option value="completed">Hoàn thành</option>
+    </select>
+  </div>
+  <div class="col-md-2 d-grid">
+    <button class="btn btn-primary" type="submit">
+      {{ todo.id ? 'Cập nhật' : 'Thêm' }}
+    </button>
+  </div>
+</form>

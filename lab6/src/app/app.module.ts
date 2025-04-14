@@ -3,20 +3,26 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
-import { CreateTodoComponent } from './create-todo/create-todo.component';
-import { NotfoundComponent } from './notfound/notfound.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { PostListComponent } from './components/post-list/post-list.component';
+import { PostFormComponent } from './components/post-form/post-form.component';
+import { TodoListComponent } from './components/todo-list/todo-list.component';
+import { TodoFormComponent } from './components/todo-form/todo-form.component';
+import { HomeComponent } from './pages/home/home.component';
+import { PostsComponent } from './pages/posts/posts.component';
+import { TodosComponent } from './pages/todos/todos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    NavbarComponent,
+    PostListComponent,
+    PostFormComponent,
+    TodoListComponent,
+    TodoFormComponent,
     HomeComponent,
-    LoginComponent,
-    RegisterComponent,
-    CreateTodoComponent,
-    NotfoundComponent
+    PostsComponent,
+    TodosComponent
   ],
   imports: [
     BrowserModule,

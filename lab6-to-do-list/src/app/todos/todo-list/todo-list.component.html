@@ -1,0 +1,16 @@
+<div class="container mt-4">
+  <h3 class="text-center mb-3">📋 Danh sách công việc</h3>
+
+  <app-todo-form [todo]="selectedTodo" (formSubmit)="onFormSubmit($event)"></app-todo-form>
+
+  <ul class="list-group">
+    <li *ngFor="let todo of todos" class="list-group-item d-flex justify-content-between align-items-center">
+      <span>{{ todo.title }} <span class="badge bg-secondary ms-2">{{ todo.status }}</span></span>
+      <div>
+        <button class="btn btn-sm btn-outline-success me-2" (click)="editTodo(todo)">✏️</button>
+        <button class="btn btn-sm btn-outline-danger" (click)="deleteTodo(todo.id!)">🗑️ Xóa</button>
+
+      </div>
+    </li>
+  </ul>
+</div>
