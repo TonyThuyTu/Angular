@@ -1,0 +1,11 @@
+.project-description {
+    font-size: 14px;
+    color: #555;
+    height: 60px; /* Chiều cao giới hạn */
+    overflow: hidden; /* Ẩn phần thừa */
+    text-overflow: ellipsis; /* Thêm dấu ba chấm khi tràn */
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Số dòng hiển thị */
+    -webkit-box-orient: vertical;
+  }
+  

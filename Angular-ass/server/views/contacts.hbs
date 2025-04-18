@@ -1,0 +1,47 @@
+<section>
+  <h2 class="mb-4">{{title}}</h2>
+  <table class="table table-hover">
+    <thead class="table-light">
+      <tr>
+        <th>#</th>
+        <th>Họ tên</th>
+        <th>Email</th>
+        <th>Số điện thoại</th>
+        <th>Thao tác</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each contacts}}
+        <tr>
+          <td>{{@index}}</td>
+          <td>{{this.name}}</td>
+          <td>{{this.email}}</td>
+          <td>{{this.phone}}</td>
+          <td>
+            <button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#contactModal{{@index}}">Xem thêm</button>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</section>
+
+{{!-- Modal chi tiết liên hệ --}}
+{{#each contacts}}
+<div class="modal fade" id="contactModal{{@index}}" tabindex="-1" aria-labelledby="contactModal{{@index}}Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Chi tiết liên hệ</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Họ tên:</strong> {{this.name}}</p>
+        <p><strong>Email:</strong> {{this.email}}</p>
+        <p><strong>SĐT:</strong> {{this.phone}}</p>
+        <p><strong>Nội dung:</strong> {{this.message}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+{{/each}}

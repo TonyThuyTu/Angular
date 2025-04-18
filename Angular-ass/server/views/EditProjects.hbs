@@ -1,0 +1,72 @@
+<div class="container mt-5">
+  <h2 class="mb-4">Sửa Dự Án</h2>
+
+    {{!-- Alert thông báo thành công --}}
+    {{#if success}}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+        {{success}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <script>
+        // Sau khi hiển thị thông báo thành công, chuyển hướng về danh sách dự án
+        setTimeout(function() {
+            window.location.href = '/projects/list'; // Chuyển hướng về trang danh sách
+        }, 2000);  // Chờ 2 giây để người dùng có thể đọc thông báo
+        </script>
+    {{/if}}
+
+    {{!-- Alert thông báo lỗi --}}
+    {{#if error}}
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        {{error}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    {{/if}}
+
+  <form action="/projects/edit/{{project._id}}" method="POST" enctype="multipart/form-data">
+    <div class="mb-3">
+      <label for="name" class="form-label">Tên dự án</label>
+      <input type="text" class="form-control" id="name" name="name" value="{{project.name}}" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="description" class="form-label">Mô tả</label>
+      <textarea class="form-control" id="description" name="description" rows="3" required>{{project.description}}</textarea>
+    </div>
+
+    <div class="mb-3">
+      <label for="techstack" class="form-label">Stack Công Nghệ (cách nhau bằng dấu phẩy)</label>
+      <input type="text" class="form-control" id="techstack" name="techstack" value="{{project.techstack}}" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="link" class="form-label">Link</label>
+      <input type="url" class="form-control" id="link" name="link" value="{{project.link}}" required>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="startDate" class="form-label">Ngày Bắt Đầu</label>
+        <input type="date" class="form-control" id="startDate" name="startDate" value="{{project.startDate}}" onchange="updateEndDate()" required>
+      </div>
+
+      <div class="col-md-6 mb-3">
+        <label for="endDate" class="form-label">Ngày Kết Thúc</label>
+        <input type="date" class="form-control" id="endDate" name="endDate" value="{{project.endDate}}" min="{{project.startDate}}" required>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="image" class="form-label">Ảnh đại diện (nếu muốn thay)</label>
+      <input class="form-control" type="file" id="image" name="image">
+      {{#if project.image}}
+        <div class="mt-2">
+          <label class="form-label">Ảnh hiện tại:</label><br>
+          <img src="/uploads/{{project.image}}" alt="Ảnh dự án" class="img-thumbnail" style="max-width: 200px;">
+        </div>
+      {{/if}}
+    </div>
+
+    <button type="submit" class="btn btn-primary">Cập Nhật Dự Án</button>
+  </form>
+</div>
